@@ -33,7 +33,7 @@ void moveLabels(Label cellLabels[], Destination boxes[]){
           cellLabels[i].y = mouse_y - cellLabels[i].my;
        }else{
           for (int j = 0; j < 20; j++){
-              if (cellLabels[i].x > boxes[j].x - 30 && cellLabels[i].x < boxes[j].x + 30 && cellLabels[i].y > boxes[j].y - 30 && cellLabels[i].y < boxes[j].y + 30){
+              if (cellLabels[i].x > boxes[j].x - 50 && cellLabels[i].x < boxes[j].x + 50 && cellLabels[i].y > boxes[j].y - 50 && cellLabels[i].y < boxes[j].y + 50){
                  cellLabels[i].x = boxes[j].x;
                  cellLabels[i].y = boxes[j].y;
               }
@@ -42,6 +42,9 @@ void moveLabels(Label cellLabels[], Destination boxes[]){
        if (mouse_b & 1 && mouse_x < cellLabels[i].x + cellLabels[i].w && mouse_x > cellLabels[i].x && mouse_y < cellLabels[i].y + cellLabels[i].h && mouse_y > cellLabels[i].y){
           cellLabels[i].mx = mouse_x - cellLabels[i].x;
           cellLabels[i].my = mouse_y - cellLabels[i].y;
+          for (int j = 0; j < 20; j++){
+          	cellLabels[j].clicked = false;
+          }
           cellLabels[i].clicked = true;
           break;
        }else{
@@ -53,7 +56,7 @@ void moveLabels(Label cellLabels[], Destination boxes[]){
 bool checkLabels(Label cellLabels[], Destination boxes[]){
      bool check = true;
      for (int i = 0; i < 20; i++){
-         if (cellLabels[i].visible && (cellLabels[i].x!=boxes[i].x || cellLabels[i].x!=boxes[i].x)){
+         if (cellLabels[i].visible && (cellLabels[i].x!=boxes[i].x || cellLabels[i].y!=boxes[i].y)){
             check = false;
          }
      }
