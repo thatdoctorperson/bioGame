@@ -31,7 +31,7 @@ int main() {
         cellLabels[i].h = 40;
         cellLabels[i].w = 100;
         cellLabels[i].clicked = false;
-        strcpy(cellLabels[i].name, "boner");
+        strcpy(cellLabels[i].name, "bdsbjsdf");
         cellLabels[i].visible = true;
         
         boxes[i].x = 200;
