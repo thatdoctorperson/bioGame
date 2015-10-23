@@ -15,27 +15,44 @@ int main() {
 	init();
 	
 	show_mouse(screen);
-	Label boxes[20];
+	Label cellLabels[20];
+	Destination boxes[20];
 	BITMAP *buffer = create_bitmap(640, 480);
 	
 	for (int i = 0; i < 20; i++){
+        cellLabels[i].visible = false;
+
+        boxes[i].visible = false;
+    }
+	
+	for (int i = 0; i < 10; i++){
+        cellLabels[i].y = i * 50;
+        cellLabels[i].x = 40;
+        cellLabels[i].h = 40;
+        cellLabels[i].w = 100;
+        cellLabels[i].clicked = false;
+        strcpy(cellLabels[i].name, "boner");
+        cellLabels[i].visible = true;
+        
+        boxes[i].x = 200;
         boxes[i].y = i * 50;
-        boxes[i].x = 40;
         boxes[i].h = 40;
         boxes[i].w = 100;
-        boxes[i].c.r = 255;
-        boxes[i].c.g = 0;
-        boxes[i].c.b = 255;
-        boxes[i].clicked = false;
-        strcpy(boxes[i].name, "boner");
+        boxes[i].visible = true;
     }
     
     
 
 	while (!key[KEY_ESC]) {
 		/* put your code here */
-        moveLabels(boxes);
-        drawLabels(boxes);
+        moveLabels(cellLabels, boxes);
+        drawLabels(cellLabels, boxes);
+        
+        if (mouse_b & 1 && mouse_x < 620 && mouse_x > 540 && mouse_y < 460 && mouse_y > 420){
+           if (checkLabels(cellLabels, boxes)){
+              return 0;
+           }
+        }
 	}
 
 	deinit();
