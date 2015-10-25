@@ -26,8 +26,9 @@ int main() {
 	Destination boxes[20];
 	BITMAP *background = NULL;
 	BITMAP *bufferMain = create_bitmap(screenw, screenh);
+	int lvl = 1;
     
-   	loadLvl(cellLabels, boxes, background, 1);
+   	loadLvl(cellLabels, boxes, background, lvl);
     
 	while (!key[KEY_ESC]) {
         moveLabels(cellLabels, boxes);
@@ -37,7 +38,7 @@ int main() {
         
         if (mouse_b & 1 && mouse_x < 95 && mouse_x > 15 && mouse_y < 55 && mouse_y > 15){
            if (checkLabels(cellLabels, boxes)){
-              return 0;
+              loadLvl(cellLabels, boxes, background, lvl);
            }
         }
 	}
