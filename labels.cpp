@@ -19,8 +19,8 @@ void drawLabels(Label cellLabels[], Destination boxes[], BITMAP *bufferMain){
         }
     }
     
-    rectfill(buffer, 15, 15, 95, 55, makecol(0,255,0));
-    textout_ex(buffer, fonts[LC18], "Check", 20, 25, makecol(0,0,0), -1);
+    rectfill(buffer, 540, 420/*BLAZE IT*/, 620, 460, makecol(0,255,0));
+    textout_ex(buffer, fonts[LC18], "Check", 550, 430, makecol(0,0,0), -1);
     
     masked_blit(buffer, bufferMain, 0, 0, 0, 0, screenw, screenh);
     destroy_bitmap(buffer);
