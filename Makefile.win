@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o labels.o fonts.o
-LINKOBJ  = main.o labels.o fonts.o
+OBJ      = main.o labels.o fonts.o levels.o
+LINKOBJ  = main.o labels.o fonts.o levels.o
 LIBS     = -L"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -L"D:/Program Files (x86)/Dev-Cpp/lib" -static-libgcc -lalleg -lws2_32 -mwindows -lalleg -m32
 INCS     = -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Program Files (x86)/Dev-Cpp/include"
 CXXINCS  = -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"D:/Program Files (x86)/Dev-Cpp/include"
@@ -32,3 +32,6 @@ labels.o: labels.cpp
 
 fonts.o: fonts.cpp
 	$(CPP) -c fonts.cpp -o fonts.o $(CXXFLAGS)
+
+levels.o: levels.cpp
+	$(CPP) -c levels.cpp -o levels.o $(CXXFLAGS)
