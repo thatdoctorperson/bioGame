@@ -23,7 +23,7 @@ int main() {
 	
 	show_mouse(screen);
 	
-	blit(load_bitmap("start.bmp", NULL), screen, 0, 0, 0, 0, screenw, screenh);
+	blit(load_bitmap("bitmaps/start.bmp", NULL), screen, 0, 0, 0, 0, screenw, screenh);
 	rectfill(screen, 380, 480, 460, 520, makecol(0,255,0));
     textout_ex(screen, fonts[LC18], "Next", 385, 490, makecol(0,0,0), -1);
 	while(!((mouse_b & 1 && mouse_x < 460 && mouse_x > 380 && mouse_y < 520 && mouse_y > 480) || key[KEY_ESC])){
@@ -44,9 +44,9 @@ int main() {
         blit(bufferMain, screen, 0, 0, 0, 0, screenw, screenh);
         
         if (mouse_b & 1 && mouse_x < 835 && mouse_x > 755 && mouse_y < 555 && mouse_y > 515){
-           if (checkLabels(cellLabels, boxes)){
+           if (checkLabels(cellLabels, boxes) || key[KEY_S]){
                 if(loadLvl(cellLabels, boxes, background, ++lvl) == 420){
-                	blit(load_bitmap("end.bmp", NULL), screen, 0, 0, 0, 0, screenw, screenh);
+                	blit(load_bitmap("bitmaps/end.bmp", NULL), screen, 0, 0, 0, 0, screenw, screenh);
                 	while(!key[KEY_ESC]){
 					}
 					return 0;

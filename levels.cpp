@@ -23,7 +23,7 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
     switch(levelNum){
     	case 1:
     		lbls = 12;
-			background = load_bitmap("meiosis.bmp", NULL);
+			background = load_bitmap("bitmaps/meiosis.bmp", NULL);
 			if (!background)
 				background = create_bitmap(screenw, screenh);
 				
@@ -71,7 +71,7 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 			break;
 		case 2:
 			lbls = 3;
-			background = load_bitmap("metaphase1.bmp", NULL);
+			background = load_bitmap("bitmaps/metaphase1.bmp", NULL);
 			if (!background)
 				background = create_bitmap(screenw, screenh);
 				
@@ -105,7 +105,7 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 			break;
 		case 3:
 			lbls = 3;
-			background = load_bitmap("telophase1.bmp", NULL);
+			background = load_bitmap("bitmaps/telophase1.bmp", NULL);
 			if (!background)
 				background = create_bitmap(screenw, screenh);
 				
@@ -139,7 +139,7 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 			break;
 		case 4:
 			lbls = 3;
-			background = load_bitmap("prophase2.bmp", NULL);
+			background = load_bitmap("bitmaps/prophase2.bmp", NULL);
 			if (!background)
 				background = create_bitmap(screenw, screenh);
 				
@@ -173,7 +173,7 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 			break;
 		case 5:
 			lbls = 3;
-			background = load_bitmap("anaphase2.bmp", NULL);
+			background = load_bitmap("bitmaps/anaphase2.bmp", NULL);
 			if (!background)
 				background = create_bitmap(screenw, screenh);
 				
@@ -207,7 +207,7 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 			break;
 		case 6:
 			lbls = 2;
-			background = load_bitmap("cytokinesis2.bmp", NULL);
+			background = load_bitmap("bitmaps/cytokinesis2.bmp", NULL);
 			if (!background)
 				background = create_bitmap(screenw, screenh);
 				
