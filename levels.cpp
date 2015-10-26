@@ -28,7 +28,7 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 				background = create_bitmap(screenw, screenh);
 				
 			for (int i = 0; i < lbls; i++){
-		        cellLabels[i].y = i * 45;
+		        cellLabels[i].y = i * 43;
 		        cellLabels[i].x = 735;
 		        cellLabels[i].h = 40;
 		        cellLabels[i].w = 100;

@@ -43,7 +43,7 @@ int main() {
         drawLabels(cellLabels, boxes, bufferMain);
         blit(bufferMain, screen, 0, 0, 0, 0, screenw, screenh);
         
-        if (mouse_b & 1 && mouse_x < 95 && mouse_x > 15 && mouse_y < 55 && mouse_y > 15){
+        if (mouse_b & 1 && mouse_x < 835 && mouse_x > 755 && mouse_y < 555 && mouse_y > 515){
            if (checkLabels(cellLabels, boxes)){
                 if(loadLvl(cellLabels, boxes, background, ++lvl) == 420){
                 	blit(load_bitmap("end.bmp", NULL), screen, 0, 0, 0, 0, screenw, screenh);
