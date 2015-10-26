@@ -7,8 +7,8 @@ void drawLabels(Label cellLabels[], Destination boxes[], BITMAP *bufferMain){
     clear_to_color(buffer, makecol(255,0,255));
     for (int i = 0; i < 20; i++){
         if (boxes[i].visible){
-            rectfill(buffer, boxes[i].x, boxes[i].y, boxes[i].x + boxes[i].w, 
-                boxes[i].y + boxes[i].h, BOXCOL);
+            rectfill(buffer, boxes[i].x-1, boxes[i].y-1, boxes[i].x+1 + boxes[i].w, 
+                boxes[i].y+1 + boxes[i].h, BOXCOL);
         }
     }
     for (int i = 0; i < 20; i++){
