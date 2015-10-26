@@ -26,7 +26,7 @@ int main() {
 	Destination boxes[20];
 	BITMAP *background = NULL;
 	BITMAP *bufferMain = create_bitmap(screenw, screenh);
-	int lvl = 2;
+	int lvl = 1;
     
    	loadLvl(cellLabels, boxes, background, lvl);
     
