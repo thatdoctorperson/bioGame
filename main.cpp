@@ -54,9 +54,9 @@ int main() {
            }
         }
 	}
-	
 	destroy_bitmap(background); 
-		destroy_bitmap(bufferMain);
+	destroy_bitmap(bufferMain);
+
 	deinit();
 	return 0;
 }
