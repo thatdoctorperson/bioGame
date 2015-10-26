@@ -237,7 +237,7 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 			strcpy(cellLabels[1].name, "Haploid Cells");
 			break;
 		default:
-			return 404;
+			return 420;
 	}
 	
 	return 1;

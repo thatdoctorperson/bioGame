@@ -20,7 +20,7 @@ void drawLabels(Label cellLabels[], Destination boxes[], BITMAP *bufferMain){
     }
     
     rectfill(buffer, 15, 15, 95, 55, makecol(0,255,0));
-    textout_ex(buffer, fonts[LC18], "Check", 20, 25, makecol(0,0,0), -1);
+    textout_ex(buffer, fonts[LC18], "Next", 20, 25, makecol(0,0,0), -1);
     
     masked_blit(buffer, bufferMain, 0, 0, 0, 0, screenw, screenh);
     destroy_bitmap(buffer);
