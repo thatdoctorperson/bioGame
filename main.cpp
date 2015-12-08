@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctime>
+#include <winalleg.h>
 #include "fonts.h"
 #include "labels.h"
 #include "levels.h"
@@ -34,7 +35,7 @@ int main() {
 	BITMAP *background = NULL;
 	BITMAP *bufferMain = create_bitmap(screenw, screenh);
 	int lvl = 1;
-    
+	
    	loadLvl(cellLabels, boxes, background, lvl);
     
 	while (!key[KEY_ESC]) {
@@ -46,7 +47,38 @@ int main() {
         if (mouse_b & 1 && mouse_x < 835 && mouse_x > 755 && mouse_y < 555 && mouse_y > 515){
            if (checkLabels(cellLabels, boxes) || key[KEY_S]){
                 if(loadLvl(cellLabels, boxes, background, ++lvl) == 420){
-                	blit(load_bitmap("bitmaps/end.bmp", NULL), screen, 0, 0, 0, 0, screenw, screenh);
+                	clear_to_color(screen, makecol(255, 255, 255));
+                	Sleep(2000);
+                	//Dot
+                	clear_to_color(screen, makecol(125, 38, 205));
+                	Sleep(500);
+                	//Space
+                	clear_to_color(screen, makecol(255, 255, 255));
+                	Sleep(500);
+                	//Dot
+                	clear_to_color(screen, makecol(125, 38, 205));
+                	Sleep(500);
+                	//Space
+                	clear_to_color(screen, makecol(255, 255, 255));
+                	Sleep(500);
+                	//Dash
+                	clear_to_color(screen, makecol(125, 38, 205));
+                	Sleep(1500);
+                	//Space
+                	clear_to_color(screen, makecol(255, 255, 255));
+                	Sleep(500);
+                	//Dash
+                	clear_to_color(screen, makecol(125, 38, 205));
+                	Sleep(1500);
+                	//Space
+                	clear_to_color(screen, makecol(255, 255, 255));
+                	Sleep(500);
+                	//Dash
+                	clear_to_color(screen, makecol(125, 38, 205));
+                	Sleep(1500);
+                	//Space
+                	clear_to_color(screen, makecol(255, 255, 255));
+                	Sleep(500);
                 	while(!key[KEY_ESC]){
 					}
 					return 0;

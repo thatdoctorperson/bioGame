@@ -1,4 +1,5 @@
 #include <allegro.h>
+#include <winalleg.h>
 #include "labels.h"
 #include "fonts.h"
 
@@ -54,11 +55,13 @@ void moveLabels(Label cellLabels[], Destination boxes[]){
 }
 
 bool checkLabels(Label cellLabels[], Destination boxes[]){
-     bool check = true;
+     /*bool check = true;
      for (int i = 0; i < 20; i++){
          if (cellLabels[i].visible && (cellLabels[i].x!=boxes[i].x || cellLabels[i].y!=boxes[i].y)){
             check = false;
          }
      }
-     return check;
+     return check;*/
+     Sleep(500);
+     return true;
 }

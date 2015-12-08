@@ -22,10 +22,9 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
     
     switch(levelNum){
     	case 1:
-    		lbls = 12;
-			background = load_bitmap("bitmaps/meiosis.bmp", NULL);
-			if (!background)
-				background = create_bitmap(screenw, screenh);
+    		lbls = 4;
+    		background = create_bitmap(screenw, screenh);
+			clear_to_color(background, makecol(125, 38, 205));
 				
 			for (int i = 0; i < lbls; i++){
 		        cellLabels[i].y = i * 43;
@@ -42,9 +41,9 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 		        boxes[i].w = 100;
 		        boxes[i].visible = true;
 		    }
-		    for(int i = 0; i < lbls; i++){
+		    /*for(int i = 0; i < lbls; i++){
 		    	std::swap(cellLabels[i].y, cellLabels[rand()%lbls].y);
-			}
+			}*/
 		    
 		    for(int i = 0; i < 4; i++)
 			    boxes[i].x = i * 105 + 4;
@@ -56,24 +55,16 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 			boxes[10].x = 435;
 			boxes[11].x = 590;
 			
-			strcpy(cellLabels[0].name, "Interphase");
-			strcpy(cellLabels[1].name, "Prophase 1");
-			strcpy(cellLabels[2].name, "Metaphase 1");
-			strcpy(cellLabels[3].name, "Anaphase 1");
-			strcpy(cellLabels[4].name, "Telophase 1");
-			strcpy(cellLabels[5].name, "Cytokinesis 1");
-			strcpy(cellLabels[6].name, "Interkinesis");
-			strcpy(cellLabels[7].name, "Prophase 2");
-			strcpy(cellLabels[8].name, "Metaphase 2");
-			strcpy(cellLabels[9].name, "Anaphase 2");
-			strcpy(cellLabels[10].name, "Telophase 2");
-			strcpy(cellLabels[11].name, "Cytokenesis 2");
+			strcpy(cellLabels[0].name, "A");
+			strcpy(cellLabels[1].name, "very");
+			strcpy(cellLabels[2].name, "clean");
+			strcpy(cellLabels[3].name, "animal");
+
 			break;
 		case 2:
-			lbls = 3;
-			background = load_bitmap("bitmaps/metaphase1.bmp", NULL);
-			if (!background)
-				background = create_bitmap(screenw, screenh);
+			lbls = 5;
+			background = create_bitmap(screenw, screenh);
+			clear_to_color(background, makecol(125, 38, 205));
 				
 			for (int i = 0; i < lbls; i++){
 		        cellLabels[i].y = i * 45 + 214;
@@ -88,9 +79,9 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 		        boxes[i].w = 100;
 		        boxes[i].visible = true;
 		    }
-		    for(int i = 0; i < lbls; i++){
+		    /*for(int i = 0; i < lbls; i++){
 		    	std::swap(cellLabels[i].y, cellLabels[rand()%lbls].y);
-			}
+			}*/
 			
 			boxes[0].x = 33;
 			boxes[0].y = 362;
@@ -99,15 +90,16 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 			boxes[2].x = 476;
 			boxes[2].y = 315;
 			
-		    strcpy(cellLabels[0].name, "Tetrad");
-			strcpy(cellLabels[1].name, "Equator");
-			strcpy(cellLabels[2].name, "Centomere");
+		    strcpy(cellLabels[0].name, "But");
+			strcpy(cellLabels[1].name, "thought");
+			strcpy(cellLabels[2].name, "to");
+			strcpy(cellLabels[3].name, "be");
+			strcpy(cellLabels[4].name, "dirtiest");
 			break;
 		case 3:
-			lbls = 3;
-			background = load_bitmap("bitmaps/telophase1.bmp", NULL);
-			if (!background)
-				background = create_bitmap(screenw, screenh);
+			lbls = 4;
+			background = create_bitmap(screenw, screenh);
+			clear_to_color(background, makecol(125, 38, 205));
 				
 			for (int i = 0; i < lbls; i++){
 		        cellLabels[i].y = i * 45 + 214;
@@ -122,9 +114,9 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 		        boxes[i].w = 100;
 		        boxes[i].visible = true;
 		    }
-		    for(int i = 0; i < lbls; i++){
+		    /*for(int i = 0; i < lbls; i++){
 		    	std::swap(cellLabels[i].y, cellLabels[rand()%lbls].y);
-			}
+			}*/
 			
 			boxes[0].x = 25;
 			boxes[0].y = 458;
@@ -133,15 +125,15 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 			boxes[2].x = 518;
 			boxes[2].y = 279;
 			
-		    strcpy(cellLabels[0].name, "Chromosome");
-			strcpy(cellLabels[1].name, "Cleavage Furrow");
-			strcpy(cellLabels[2].name, "Centrioles");
+		    strcpy(cellLabels[0].name, "Where");
+			strcpy(cellLabels[1].name, "does");
+			strcpy(cellLabels[2].name, "it");
+			strcpy(cellLabels[3].name, "sleep?");
 			break;
 		case 4:
-			lbls = 3;
-			background = load_bitmap("bitmaps/prophase2.bmp", NULL);
-			if (!background)
-				background = create_bitmap(screenw, screenh);
+			lbls = 4;
+			background = create_bitmap(screenw, screenh);
+			clear_to_color(background, makecol(125, 38, 205));
 				
 			for (int i = 0; i < lbls; i++){
 		        cellLabels[i].y = i * 45 + 214;
@@ -156,9 +148,9 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 		        boxes[i].w = 100;
 		        boxes[i].visible = true;
 		    }
-		    for(int i = 0; i < lbls; i++){
+		    /*for(int i = 0; i < lbls; i++){
 		    	std::swap(cellLabels[i].y, cellLabels[rand()%lbls].y);
-			}
+			}*/
 			
 			boxes[0].x = 10;
 			boxes[0].y = 473;
@@ -167,11 +159,12 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 			boxes[2].x = 503;
 			boxes[2].y = 437;
 			
-		    strcpy(cellLabels[0].name, "Cell Membrane");
-			strcpy(cellLabels[1].name, "Diploid Cell");
-			strcpy(cellLabels[2].name, "Nucleus");
+		    strcpy(cellLabels[0].name, "Where");
+			strcpy(cellLabels[1].name, "utensils");
+			strcpy(cellLabels[2].name, "are");
+			strcpy(cellLabels[3].name, "inkiest");
 			break;
-		case 5:
+		/*case 5:
 			lbls = 3;
 			background = load_bitmap("bitmaps/anaphase2.bmp", NULL);
 			if (!background)
@@ -235,7 +228,7 @@ int loadLvl(Label cellLabels[], Destination boxes[], BITMAP *&background, int le
 			
 		    strcpy(cellLabels[0].name, "Chromatin");
 			strcpy(cellLabels[1].name, "Haploid Cells");
-			break;
+			break;*/
 		default:
 			return 420;
 	}
